@@ -8,9 +8,10 @@ operator_chart = {
 
 
 def get(array, i, pos):
-    return array[array[i+pos]]
+    return array[array[i + pos]]
 
 
+# ------- Part 1 -------
 def magic_smoke(array):
     halt = 99
     for i in range(0, len(array), 4):
@@ -24,6 +25,7 @@ def magic_smoke(array):
             print("Invalid opcode")
 
 
+# ------- Part 2 -------
 def jack_in_the_box(array, wanted):
     for i in range(0, 99):
         for j in range(0, 99):
@@ -31,7 +33,7 @@ def jack_in_the_box(array, wanted):
             arr_copy[1], arr_copy[2] = i, j
             result = magic_smoke(arr_copy)[0]
             if result == wanted:
-                return 100*i+j
+                return 100 * i + j
 
 
 if __name__ == "__main__":
