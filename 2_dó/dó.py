@@ -27,8 +27,8 @@ def magic_smoke(array):
 
 # ------- Part 2 -------
 def jack_in_the_box(array, wanted):
-    for i in range(0, 99):
-        for j in range(0, 99):
+    for i in range(0, 100):
+        for j in range(0, 100):
             arr_copy = array[:]
             arr_copy[1], arr_copy[2] = i, j
             result = magic_smoke(arr_copy)[0]
@@ -37,5 +37,5 @@ def jack_in_the_box(array, wanted):
 
 
 if __name__ == "__main__":
-    # print(jack_in_the_box(int_code, 19690720))
+    print(jack_in_the_box(int_code, 19690720))
     print(magic_smoke(int_code))
